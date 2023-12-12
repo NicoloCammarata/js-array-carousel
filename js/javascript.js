@@ -3,51 +3,108 @@
 
 
 
-let img = document.querySelector('.col-8')
+const carosello = [
+    Gatti = '<img id="Gatti"  src="./img/02.webp" alt="">',
+    StarWars = '<img id="StarWars" class="d-none" src="img/03.webp" alt="">',
+    Stivali = '<img id="Stivali" class="d-none" src="img/04.webp" alt="">',
+    Avengers = '<img id="Avengers" class="d-none" src="img/05.webp" alt="">',
+    SpiderMan = '<img id="SpiderMan" class="d-none" src="./img/01.webp" alt="">'
+]
 
-//let SpiderMan = img.innerHTML += '<img class=""  src="img/01.webp" alt="">';
-//let Gatti = img.innerHTML += '<img class="d-none" src="img/02.webp" alt="">';
-//let stawars = img.innerHTML += '<img class="d-none" src="img/03.webp" alt="">';
-//let stivali = img.innerHTML += '<img class="d-none" src="img/04.webp" alt="">';
-//let avengers = img.innerHTML += '<img class="d-none" src="img/05.webp" alt="">';
-//const SpiderMan = ['img/01webp']
+let newImg = document.getElementById('foto')
 
-const myButton = document.getElementById('special-button');
 
+
+
+for (let i = 0; i < carosello.length; i++){
+
+        
+
+    console.log(i)
+    if (i == 0) {
+        newImg.innerHTML += carosello[i];
+        console.log(newImg) 
+
+        
+    }
+    else if (i == 1){
+        newImg.innerHTML += carosello[i];
+ 
+
+    }
+    else if (i == 2){
+        newImg.innerHTML += carosello[i];
+ 
+
+    }
+    else if (i == 3){
+        newImg.innerHTML += carosello[i] ;
+
+
+    }
+    else if (i == 4){
+        newImg.innerHTML += carosello[i];
+
+
+    }
+     
+    
+}
+
+let myButton = document.getElementById('special-button');
+allimg = document.querySelectorAll("img")
+console.log(allimg)
+
+
+    
 let counter = 0;
 
 myButton.addEventListener('click', function() {
 
-    counter += 1;
+    if (counter < (allimg.length - 1)) {
+        allimg[counter].classList.add("d-none");
 
+        counter ++;
 
-    let img = document.querySelector('.col-8')
+        allimg[counter].classList.remove("d-none");
     
-    if (counter == 1) {
-        img.innerHTML += '<img id="Gatti" src="img/02.webp" alt="">';
-        SpiderMan.style.display="none" 
-
+        
         
     }
-    else if (counter == 2){
-        img.innerHTML += '<img id="StarWars" src="img/03.webp" alt="">';
-        Gatti.style.display="none" 
 
-    }
-    else if (counter == 3){
-        img.innerHTML += '<img id="Stivali" src="img/04.webp" alt="">';
-        StarWars.style.display="none" 
-
-    }
-    else if (counter == 4){
-        img.innerHTML += '<img id="Avengers" src="img/05.webp" alt="">';
-        Stivali.style.display="none" 
-
-    }
+    
+    
+    
     
     
 });
+    
 
+
+let leftButton = document.getElementById('button-left');
+
+console.log(leftButton)
+
+
+leftButton.addEventListener('click', function() {
+
+    if (counter > 0) {
+        allimg[counter].classList.add("d-none");
+
+        counter --;
+
+        allimg[counter].classList.remove("d-none");
+    
+        
+        
+    }
+
+    
+    
+    
+    
+    
+});
 
 
 
