@@ -20,7 +20,7 @@ for (let i = 0; i < carosello.length; i++){
 
         
 
-    console.log(i)
+    
     if (i == 0) {
         newImg.innerHTML += carosello[i];
         console.log(newImg) 
@@ -48,7 +48,7 @@ for (let i = 0; i < carosello.length; i++){
 
     }
      
-    
+    console.log(i)
 }
 
 let myButton = document.getElementById('special-button');
@@ -56,10 +56,52 @@ allimg = document.querySelectorAll("img")
 console.log(allimg)
 
 
+
+function win (){
     
+    allimg[counter].classList.add("d-none");
+        
+    counter ++;
+        
+    allimg[counter].classList.remove("d-none");
+
+    console.log(win)
+
+    
+
+    
+
+     
+}
+
+
+
+setTimeout (win, 3000);
+setTimeout (win, 6000);
+setTimeout (win, 9000);
+setTimeout (win, 12000);
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
 let counter = 0;
 
 myButton.addEventListener('click', function() {
+
+
+    
 
     if (counter < (allimg.length - 1)) {
         allimg[counter].classList.add("d-none");
@@ -71,6 +113,8 @@ myButton.addEventListener('click', function() {
         
         
     }
+    
+    
 
     
     
