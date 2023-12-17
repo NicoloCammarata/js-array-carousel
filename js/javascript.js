@@ -57,41 +57,54 @@ console.log(allimg)
 
 
 
+
+
+
+let stopButton = document.getElementById('stop-button');
+
+stopButton.addEventListener('click', function() {
+    stopButton.classList.add('clicked')
+    
+    
+    
+
+
+});
+
+
 function win (){
     
     allimg[counter].classList.add("d-none");
+
+    
+    if(stopButton.classList.contains('clicked') == false){
+        counter ++;
+    
+
         
-    counter ++;
+    }
+     
+    
+    
         
     allimg[counter].classList.remove("d-none");
 
-    console.log(win)
-
     
+
+    console.log(win)
 
     
 
      
 }
 
-
-
-setTimeout (win, 3000);
-setTimeout (win, 6000);
-setTimeout (win, 9000);
-setTimeout (win, 12000);
-
+setTimeout(win, 3000)
+setTimeout(win, 6000)
+setTimeout(win, 9000)
+setTimeout(win, 12000)
 
 
 
-
-
-
-
-
-
-
-    
 
 
 
