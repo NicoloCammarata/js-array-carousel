@@ -73,35 +73,46 @@ stopButton.addEventListener('click', function() {
 
 
 function win (){
-    
-    allimg[counter].classList.add("d-none");
 
-    
-    if(stopButton.classList.contains('clicked') == false){
+
+    if ((counter < (allimg.length - 1)) && (stopButton.classList.contains('clicked') == false)) {
+        allimg[counter].classList.add("d-none");
+
         counter ++;
-    
 
+        allimg[counter].classList.remove("d-none");
+    
+        
         
     }
+    else if(counter == (allimg.length - 1)) {
+        allimg[counter].classList.add("d-none");
+
+        counter = 0;
+
+        allimg[counter].classList.remove("d-none");
+    
+        
+        
+    }
+     
      
     
     
         
-    allimg[counter].classList.remove("d-none");
+    
 
     
 
     console.log(win)
+    console.log( 'counter :' + counter)
 
     
 
      
 }
 
-setTimeout(win, 3000)
-setTimeout(win, 6000)
-setTimeout(win, 9000)
-setTimeout(win, 12000)
+setInterval(win, 3000)
 
 
 
@@ -120,6 +131,16 @@ myButton.addEventListener('click', function() {
         allimg[counter].classList.add("d-none");
 
         counter ++;
+
+        allimg[counter].classList.remove("d-none");
+    
+        
+        
+    }
+    else if(counter == (allimg.length - 1)) {
+        allimg[counter].classList.add("d-none");
+
+        counter = 0;
 
         allimg[counter].classList.remove("d-none");
     
